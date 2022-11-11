@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech Recognition in Python</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
+</head>
+<body>
+
+<div id="Test1">
+    <h1>Test1</h1>
+
+    <form method="post" enctype="multipart/form-data">
+
+        <h2>Question 1</h2>
+        <h3>Walk us through your resume.</h3>      
+        <input type="submit" id="submitButton0" value="start"/>
+        <h2>Question 2</h2>
+        <h3>Why should we hire you?</h3>
+        <input type="submit" id="submitButton1" value="start"/>
+        <h2>Question 3</h2>
+        <h3>What are your greatest strengths?</h3>
+        <input type="submit" id="submitButton2" value="start"/>
+        <h2>Question 4</h2>
+        <h3>What do you consider to be your weaknesses?</h3>
+        <input type="submit" id="submitButton3" value="start"/>
+        <h2>Question 5</h2>
+        <h3>Tell me about a time you demonstrated leadership skills.</h3>
+        <input type="submit" id="submitButton" value="start"/>
+
+    
+    </form>
+
+
+</div>
+
+</body>
+<style>
+    .Test1{
+        padding-left: 50px;
+    }
+</style>
+</html>

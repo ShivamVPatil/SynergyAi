@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SynergyAI</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/5d39666ed9.js" crossorigin="anonymous"></script>  
+
+</head>
+<body>
+    <!-- NAVBAR SECTION -->
+
+<nav class="navbar">
+    <div class="navbar_container">
+        <img src="data:image/png;base64,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">
+        <a class="navbar__logo">Synergy.AI</a>
+        <div class="navbar_toggle" id="mobile-menu">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+        </div>
+        {% if current_user.is_authenticated %}
+        <ul class="navbar_menu">
+            <li class="navbar_item">
+                <a class="navbar_links">Welcome, {{ current_user.username }}</a>
+            </li>
+
+            <li class="navbar_button">
+                <a href="{{ url_for('logout_page') }}" class="button">Logout</a>
+            </li>
+        </ul>
+         {% else %}
+        <ul class="navbar_menu">
+            <li class="navbar_item">
+                <a href="{{ url_for('login_page') }}" class="navbar_links">Login</a>
+            </li>
+
+            <li class="navbar_button">
+                <a href="{{ url_for('register') }}" class="button">Register</a>
+            </li>
+        </ul>
+        {% endif %}
+    </div>
+</nav>
+
+
+<!-- HERO SECITON -->
+
+
+    <div class="main_container">
+        <div class="main_img--container">
+            <img src="{{logo}}" alt="pic" id="main_img">
+        </div>
+        <div class="main_content">
+            <h1>Revolutionizing talent recruitment</h1>
+
+            <button class="main_btn"><a href="/">Get Started</a></button>
+        </div>
+
+    </div>
+
+<div class="main">
+    <div class="main_container2">
+
+        <div class="main_content2">
+            <h1>AI video interview platform</h1>
+            <br><br>
+            <p>Synergy.AI is an advanced artificial intelligence powered recruiting
+platform that pre screens and shortlists candidates, helping hire the
+best talent suited for the role you are looking for.</p>
+        </div>
+         <div class="main_img--container2">
+            <img src="{{logo2}}" alt="pic" >
+        </div>
+
+    </div>
+</div>
+
+<!-- SERVICES SECITON -->
+
+
+<div class="services">
+    <h1>Why Synergy.AI ? </h1>
+    <div class="services_container">
+        <div class="services_card">
+            <h1>Save Money</h1>
+            <p>Cut off your hiring expenses by choosing synergy ai. Our platform
+efficiently pre screens candidates
+with in depth data analysis available
+to you in a click
+</p>
+        </div>
+        <div class="services_card">
+
+            <h1>Save Time</h1>
+            <p>In today's world, time is what matters the most and
+                                            our platform helps you save the time lost in hiring processes
+                                            so you can focus on the bigger picture.</p>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER SECTION -->
+
+<div class="footer_container">
+    <div class="footer_links">
+
+    </div>
+    <div class="social_media">
+        <div class="social_media-wrap">
+            <div class="footer_logo">
+                <a href="/" id="footer_logo">                <img src="data:image/png;base64,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">
+Synergy.AI</a>
+            </div>
+            <p class="website_right">Synergy.AI 2022. All rights reserved.</p>
+            <div class="social_icons">
+                <a href="/" class="social_icon--link" target="blank"><i class="fab fa-facebook"></i></a>
+                <a href="/" class="social_icon--link" target="blank"><i class="fab fa-instagram"></i></a>
+                <a href="/" class="social_icon--link" target="blank"><i class="fab fa-twitter"></i></a>
+                <a href="/" class="social_icon--link" target="blank"><i class="fab fa-linkedin"></i></a>
+                <a href="/" class="social_icon--link" target="blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<style>
+    *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans',sans-serif;
+}
+
+.navbar{
+  background: #000000;  /* fallback for old browsers */
+
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    font-size: 1.2rem;
+    z-index: 999;
+    top: 0;
+
+}
+
+.navbar_container{
+    display: flex;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    height: 80px;
+    max-width: 1300px;
+    justify-content: center;
+    z-index: 1;
+      padding-top: 20px;
+
+}
+
+.navbar_menu{
+    display: flex;
+    align-items: center;
+    list-style: none;;
+    text-align: center;
+    padding-left:600px;
+    padding-bottom:15px;
+
+}
+
+.navbar_item{
+    height: 80px;
+}
+
+.navbar_links{
+    color:#fff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+    padding:0 1rem;
+   height:100%;
+}
+
+.navbar__logo{
+   background: #fff;
+   font-weight:bold;
+background-size: 100%;
+-webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    align-items: left;
+    display: inline;
+    font-size: 2.3rem;
+    text-decoration: none;
+    cursor: pointer;
+    padding-right:125px;
+
+}
+.navbar__logo span{
+color:#6C63FF;
+}
+
+
+.navbar_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:0 1rem;
+    width: 100%;
+
+    }
+
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border:none;
+    padding:10px 20px;
+    border-radius: 3px;
+    color: #fff;
+    background-color: crimson;
+}
+
+.button:hover{
+    background-color:coral;
+    transition: all 0.4s ease;
+}
+
+.navbar_links:hover{
+    color:#5243d8;
+    transition: all 0.4s ease;
+
+}
+
+/* HERO SECTION */
+
+
+.main{
+    background: #1e2022;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #52616b, #1e2022);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #52616b, #1e2022); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+.main_container{
+    display: grid;
+    background:#fbab7e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right,#f7ce68, #fbab7e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right,#f7ce68, #fbab7e ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    z-index: 1;
+    width: 100%;
+    padding-left:50px;
+}
+.main_container2{
+    border-top-color: #000000;
+    display: grid;
+    background-image: radial-gradient(#86fde8, #acb6e5);  /* fallback for old browsers */
+
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    z-index: 1;
+    width: 100%;
+    padding-left:50px;
+}
+
+.main_content h1{
+    font-size: 4rem;
+    background: #000000;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+
+
+}
+
+.main_content2 h1{
+    font-size:4.3rem;
+    background: #000000;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    padding-down:50px;
+    font-family:serif;
+    text-decoration:underline;
+    color:#000000;
+    padding:10 10px;
+}
+.main_content2 p{
+color:#595757;
+padding-top:5px;
+font-size:1.2rem;
+display:flex;
+}
+
+.main_content h2{
+    font-size:s 5rem;
+    background-color: #ff8177;
+    background-image: linear-gradient(to top,#b721ff 0%,#21d4fd 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    padding-top: 5px;
+}
+
+.main_content p{
+    margin-top:1rem;
+    font-size: 2rem;
+    font-weight:700;
+    color: #fff;
+}
+
+.main_btn{
+    font-size: 1rem;
+    background-image: linear-gradient(to top,#f77062 0%,#fe5196 100%);
+    padding: 14px 32px;
+    border:none;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    outline:none;
+}
+
+.main_btn a{
+    text-decoration: none;
+    position: relative;
+    color:#fff;
+    z-index: 2;
+
+}
+
+.main_btn:after{
+    position:absolute;
+    content: '';
+    top:0;
+    left:0;
+    width: 0;
+    height: 100%;
+    background:#5243d8;
+    transition: all 0.35s;
+    border-radius: 4px;
+
+}
+
+.main_btn :hover{
+  color:#fff;
+   transition: all 0.3s ease;
+}
+
+.main_btn:hover:after{
+    width:100%;
+
+}
+
+.main_img--container{
+    text-align: left;
+    display:flex-start;
+    height:auto;
+    width:auto;
+    padding-right:50px;
+}
+.main_img--container2{
+
+ text-align: right;
+    display:flex;
+    height:auto;
+    width:auto;
+    padding-left:60px;
+
+
+}
+/* Services Section */
+
+.services{
+background: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.services h1{
+    color:white;
+    margin-bottom: 5rem;
+    padding-top:40px;
+    font-size: 2.5rem;
+    text-decoration:underline;
+}
+
+.services_container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.services_card{
+    margin:1rem;
+    display: inline;
+    height: 400px;
+    padding:7 7px;
+    width: 400px;
+    border-radius: 5px;
+    background-size: cover;
+ background: #67B26F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    justify-content:space-between;
+    position: relative;
+    color:#fff;
+}
+
+.services_card:nth-child(2){
+
+background: #FF416C;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.services_card h1{
+text-align:center;
+color:#000000;
+text-decoration:underline;}
+.services h2{
+    position:absolute;
+    top:350px;
+    left:30px;
+
+}
+
+.services_card p{
+    text-align:center;
+    position: flex;
+    font-size:1.2rem;
+    padding-left:8px;
+}
+
+.services_card button{
+    color: #fff;
+    padding:10px 20px;
+    border:none;
+    outline:none;
+    border-radius: 4px;
+    background:#f77062;
+    position: absolute;
+    top:440px;
+    left: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+.services_card:hover{
+    transform: scale(1.02);
+    transition: 0.2s ease;
+
+}
+
+
+/* FOOTER  SECTION*/
+
+.footer_container{
+    background-color: #141414;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:20vh;
+}
+
+#footer_logo{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    position:inline;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+
+}
+
+.footer_links{
+    width:100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_link-wrapper{
+    display: flex;
+}
+
+.footer_link-items{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: left;
+    width: 180px;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+
+}
+
+
+.footer_link-items h2{
+    margin-bottom: 16px;
+}
+
+.footer_link-items >h2{
+    color: #fff;
+}
+
+.footer_link-items a{
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+
+}
+
+.footer_link-items a:hover{
+    color:#e9e9e9;
+    transition: 0.3s ease-out;
+}
+
+
+
+
+
+
+.social_icon--link{
+    color: #fff;
+    font-size: 24px;
+}
+
+.social_media{
+    max-width: 1000px;
+    width:100%;
+}
+
+.social_media-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:90%;
+    max-width: 1000px;
+    margin:40 px auto 0 auto;
+}
+
+.social_icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+
+}
+.social_logo{
+    color: #fff;
+    justify-self: flex-start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.website_right{
+    color: #fff;
+
+}
+
+
+</style>
+</html>
